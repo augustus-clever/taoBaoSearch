@@ -1,0 +1,103 @@
+/**index.wxss**/
+.index-topBar {
+  position: fixed;
+  left: 0;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 110;
+}
+
+.tabBar-ipt-wrap {
+  position: relative;
+  height: 100%;
+  flex: 1;
+}
+
+.tabBar-ipt-sear {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  z-index: 1;
+}
+
+.clearImgShow {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  z-index: 3;
+}
+
+.clearImgHide {
+  display: none;
+}
+
+.tabBar-ipt {
+  height: 100%;
+  padding-left: 32px;
+  font-size: 14px;
+  color: #C2C2C2;
+  background: #FFF;
+  border-radius: 15px;
+}
+
+.unit-ipt {
+  position: relative;
+  height: 100%;
+  margin-left: 10px;
+  padding-left: 28px;
+  padding-right: 28px;
+  font-size: 14px;
+  color: #3B3B3B;
+  background: #f3f4f7;
+  border-radius: 15px;
+  border: 1px solid #e6e6ea;
+}
+
+.title-nearlySearch {
+  font-size: 14px;
+  text-align: left;
+  color: #343434;
+  line-height: 14px;
+  display: flex;
+  padding-top: 30rpx;
+  justify-content: space-between;
+}
+
+.title-clear-nearlySearch {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.list-nearlySearch {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 28rpx;
+}
+
+.list-nearlySearch text,
+.list-nearlySearch view {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  margin-bottom: 25rpx;
+  padding: 24rpx;
+  margin-right: 26rpx;
+  font-size: 24rpx;
+  color: #343434;
+  background: #f2f3f7;
+  border-radius: 17px;
+}
+
+.nearly-search {
+  padding-left: 28rpx;
+  padding-right: 28rpx;
+  padding-bottom: 28rpx;
+}

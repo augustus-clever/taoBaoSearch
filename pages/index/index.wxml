@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<!--标题栏-->
+<view class="index-topBar"
+  style="top: {{tabBarSize.top}}px;width: {{tabBarSize.width}}px;height: {{tabBarSize.height}}px;padding-right: {{tabBarSize.padding}}px">
+  <view class="tabBar-ipt-wrap">
+    <image class="tabBar-ipt-sear" src="../../image/ic-search.svg"></image>
+    <input class="unit-ipt" type="text" focus="{{isFocus}}" confirm-type="search" placeholder="请输入搜索内容"
+      model:value="{{inputValue}}" bindinput="handleInput" bindconfirm='searchContent' bindfocus="inputfocus"
+      bindblur='inputBlur'></input>
+    <image class="{{isClearShow?'clearImgShow':'clearImgHide'}}" src="../../image/ic-qingkong.svg"
+      bindtap='clearInput' />
+  </view>
+
+</view>
+
+<view class="mix-1px-top"
+  style="position:relative;height: calc(100vh - {{tabBarSize.top + tabBarSize.height + 6}}px);top: {{tabBarSize.top + tabBarSize.height + 6}}px;">
+  <!--历史搜索-->
+  <view class="nearly-search" wx:if="{{showHistory&&historyResult.length>0}}">
+    <view class="title-nearlySearch">
+      <text>历史搜索</text>
+      <image class=" title-clear-nearlySearch" src="../../image/ic-clear.png" bindtap="historyDelAll"> </image>
+    </view>
+    <view class="list-nearlySearch">
+      <text class="test-child" wx:for="{{historyResult}}" wx:key='index' bindtap="setInputValue"
+        data-item="{{item}}">{{item}}</text>
+      <view wx:if="{{hasMoreBtn}}" bindtap="toggleShowMore">
+        <image style="width:24rpx;height:24rpx" src="../../image/ic-arrowdown.svg"></image>
+      </view>
+    </view>
+  </view>
+
+</view>

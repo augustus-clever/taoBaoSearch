@@ -1,0 +1,23 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+/* 上边框1px细线 */
+.mix-1px-top::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 1px;
+  background-color: #DCDCDC;
+  -webkit-transform: scale(1, 0.5);
+  transform: scale(1, 0.5);
+}
